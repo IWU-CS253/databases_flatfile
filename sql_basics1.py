@@ -11,12 +11,14 @@ if not os.path.isfile('survey.csv'):
 if False:
     print_heading_descriptions(heading_dic)
 
-# this code mirrors CS50x lecture 7 code starting at 11:30
+# this code mirrors CS50x 2024 lecture 7 code starting at 11:30
 with open("survey.csv", "r", encoding="utf-8") as file:
-    reader = csv.reader(file)
-    next(reader)
+    reader = csv.DictReader(file)
+    x, y, z = 0, 0, 0
     for row in reader:
-        print(row[1])
+        favorite = row["language"]
+
+# test test test
 
 
 
